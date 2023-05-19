@@ -19,8 +19,8 @@ spec:
       - name: harborreg #认证信息
       containers:
       - name: tomcat
-        image: weidehualinux/java-project/java-project:v1 #镜像
-        imagePullPolicy: Always
+        image: harbor.kube.com/java-project/java-project:v1 #镜像
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
           name: web
