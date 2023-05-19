@@ -19,7 +19,7 @@ spec:
       - name: harborreg #认证信息
       containers:
       - name: tomcat
-        image: harbor.kube.com/java-project/java-project:v1 #镜像
+        image: $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME:v$BUILD_NUMBER #镜像
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
